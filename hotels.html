@@ -10,7 +10,7 @@
     <nav class="main-navigation">
       <ul class="site-navigation">
         <li><a href="info.html">Информация</a></li>
-        <li><a href="gallery.html">Информация</a></li>
+        <li><a href="gallery.html">Фото и видео</a></li>
         <li><a href="map.html">Карта штата</a></li>
         <li class="site-navigation-current"><a href="hotels.html">Гостиницы</a></li>
       </ul>
@@ -22,9 +22,60 @@
   <main class="container">
     <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
     <section class="filters">
-      <h2 class="visually-hidden">Выбор параметров гостиницы</h2>
-      <!--форма-->
+      <h2 class="visually-hidden">Выбор параметров жилья</h2>
+      <form class="infrastructure" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <ul>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
+              <label for="filter-pool">Бассейн</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
+              <label for="filter-parking">Парковка</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wi-fi" id="filter-wi-fi">
+              <label for="filter-wi-fi">Wi-Fi</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <ul>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
+              <label for="filter-hotel">Гостиница</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
+              <label for="filter-motel">Мотель</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
+              <label for="filter-apartments">Апартаменты</label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="filter-range">
+          <div class="filter-range-title">Стоимость в сутки (р):</div>
+          <div class="price-controls">
+            <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+            <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+          </div>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="range-toggle range-toggle-min"></div>
+            <div class="range-toggle range-toggle-max"></div>
+          </div>
+          <button class="btn-transparent" type="submit">Показать</button>
+        </div>
+      </form>
     </section>
+
     <section class="catalog">
       <h2 class="visually-hidden">Результаты поиска</h2>
       <div class="filters-results">
@@ -38,8 +89,8 @@
             <li><a class="sorter-link" href="#">По рейтингу</a></li>
         </ul>
         <div class="sorter-switch">
-          <button class="switch-up">^</button>
-          <button class="switch-down">^</button>
+          <a class="switch-up"><span class="visually-hidden">По возрастанию</span></a>
+          <a class="switch-down"><span class="visually-hidden">По убыванию</span></a>
         </div>
       </div>
       <ul class="catalog-list">

@@ -9,7 +9,7 @@
       <nav class="main-navigation">
         <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
-          <li><a href="gallery.html">Информация</a></li>
+          <li><a href="gallery.html">Фото и видео</a></li>
           <li><a href="map.html">Карта штата</a></li>
           <li><a href="hotels.html">Гостиницы</a></li>
         </ul>
@@ -20,23 +20,21 @@
     </header>
     <main class="container">
       <h1 class="visually-hidden">Седона - туристический городок</h1>
-
       <div class="promo-image">
         <img src="img/promo-photo.jpg" width="1200" height="511" alt="Каньоны штата Седона">
         <div class="mask">
-          <img src="promo-photo-mask.svg" width="1200" height="57" alt="Маска">
+          <img src="img/promo-photo-mask.svg" width="1200" height="57" alt="Маска">
         </div>
       </div>
-
       <section class="features">
         <h2 class="visually-hidden">Преимущества штата Седона</h2>
         <div class="promo-text">
-          <p class="promo-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-          <p class="promo-subtitle">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+          <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
         </div>
         <ul class="features-list">
           <li class="features-item-block card">
-            <div class="features-item-text card-text">
+            <div class="features-item-text">
               <h3 class="features-title">Настоящий городок</h3>
               <p>— №1 —</p>
               <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
@@ -66,7 +64,7 @@
             </ul>
           </li>
           <li class="features-item-block card-reverse">
-            <div class="features-item-text card-text">
+            <div class="features-item-text">
               <h3 class="features-title">Там есть<br>мост Дьявола</h3>
               <p>— №1 —</p>
               <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
@@ -100,24 +98,56 @@
           <span class="booking-form-title">Заинтересовались?</span>
           <p class="promo-subtitle">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         </div>
-        <a class="button-form-open" href="#">Поиск гостиницы в Седоне</a>
+        <a class="modal-form-open" href="#">Поиск гостиницы в Седоне</a>
       </section>
-      <section class="modal-booking-form">
+      <section class="modal-form">
         <h2 class="visually-hidden">Поиск гостиницы</h2>
+        <form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
+          <label>Дата заезда
+            <input type="text" name="date-of-arrival" value="" placeholder="24.04.2017">
+          </label>
+          <label>Дата выезда
+            <input type="text" name="date-of-departure" value="" placeholder="04.07.2017">
+          </label>
+          <div class="number-of-persons">
+            <div class="container">
+              <label for="adult">Взрослые</label>
+              <button class="button-number minus" type="button">
+                <span class="visually-hidden">Меньше</span>
+              </button>
+              <input type="text" id="adult" name="number-of-adult" value="2">
+              <button class="button-number plus" type="button">
+                <span class="visually-hidden">Больше</span>
+              </button>
+            </div>
+            <div class="container">
+              <label for="children">Дети</label>
+              <button class="button-number minus" type="button">
+                <span class="visually-hidden">Меньше</span>
+              </button>
+              <input type="text" id="children" name="number-of-children" value="2">
+              <button class="button-number plus" type="button">
+                <span class="visually-hidden">Больше</span>
+              </button>
+            </div>
+          </div>
+          <button class="button-find" type="submit">Найти</button>
+        </form>
         <!--Форма-->
-        <button class="modal-close"></button>
+        <button class="modal-close">Закрыть окно</button>
       </section>
-      <div class="map">
+      <section class="map">
+        <h2 class="visually-hidden">Как добраться до Седоны</h2>
         <img src="img/map.png" width="1200" height="593" alt="Карта штата Седона">
-      </div>
+      </section>
     </main>
     <footer class="main-footer">
       <div class="footer-container">
         <p class="hashtag">#visitsedona</p>
         <ul>
-          <li><a class="social-button">Twitter</a></li>
-          <li><a class="social-button">Facebook</a></li>
-          <li><a class="social-button">Youtube</a></li>
+          <li><a class="social-button" href="#">Twitter</a></li>
+          <li><a class="social-button" href="#">Facebook</a></li>
+          <li><a class="social-button" href="#">Youtube</a></li>
         </ul>
         <div class="copyright">
           <p class="copyright-title">Website by</p>
