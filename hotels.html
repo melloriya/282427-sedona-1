@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Поиск гостиницы в Седоне</title>
-  <meta name="description" content="Поиск гостиницы в Седоне. Выбор, просмотр, бронирование.">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
@@ -19,9 +21,9 @@
     <img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип штата Седона">
     </a>
   </header>
-  <main class="container">
+  <main class="container inner-page">
     <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
-    <section class="filters">
+    <section class="filter">
       <h2 class="visually-hidden">Выбор параметров жилья</h2>
       <form class="infrastructure" action="https://echo.htmlacademy.ru" method="post">
         <fieldset>
@@ -42,7 +44,7 @@
           </ul>
         </fieldset>
         <fieldset>
-          <legend>Инфраструктура:</legend>
+          <legend>Тип жилья:</legend>
           <ul>
             <li class="filter-option">
               <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
@@ -83,11 +85,14 @@
           <span>Найдено:</span>
           <span>3</span>
         </p>
-        <ul class="catalog-sorter-list">
-            <li><a class="sorter-link-current" href="#">По цене</a></li>
-            <li><a class="sorter-link" href="#">По типу</a></li>
-            <li><a class="sorter-link" href="#">По рейтингу</a></li>
-        </ul>
+        <div class="catalog-sorter">
+          <span>Сортировка:</span>
+          <ul>
+              <li><a class="sorter-link-current"href="#">По цене</a></li>
+              <li><a class="sorter-link" href="#">По типу</a></li>
+              <li><a class="sorter-link" href="#">По рейтингу</a></li>
+          </ul>
+        </div>
         <div class="sorter-switch">
           <a class="switch-up"><span class="visually-hidden">По возрастанию</span></a>
           <a class="switch-down"><span class="visually-hidden">По убыванию</span></a>
@@ -160,10 +165,10 @@
   <footer class="main-footer">
     <div class="footer-container">
       <p class="hashtag">#visitsedona</p>
-      <ul>
-        <li><a class="social-button">Twitter</a></li>
-        <li><a class="social-button">Facebook</a></li>
-        <li><a class="social-button">Youtube</a></li>
+      <ul class="social-button-list">
+        <li><a class="social-button" href="#"><span class="visually-hidden">Twitter</span></a></li>
+        <li><a class="social-button" href="#"><span class="visually-hidden">Facebook</span></a></li>
+        <li><a class="social-button" href="#"><span class="visually-hidden">Youtube</span></a></li>
       </ul>
       <div class="copyright">
         <p class="copyright-title">Website by</p>
